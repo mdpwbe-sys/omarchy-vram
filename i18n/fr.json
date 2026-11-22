@@ -1,0 +1,6 @@
+{
+  "clear": "Vider la VRAM des modèles",
+  "busy": "Déchargement des modèles",
+  "levels": "VRAM %1 / %2 Gio · RAM %3 / %4 Gio",
+  "levelsRam": "VRAM indisponible · RAM %1 / %2 Gio"
+}

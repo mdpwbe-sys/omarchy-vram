@@ -1,0 +1,6 @@
+{
+  "clear": "Unload models from VRAM",
+  "busy": "Unloading models",
+  "levels": "VRAM %1 / %2 GiB · RAM %3 / %4 GiB",
+  "levelsRam": "VRAM unavailable · RAM %1 / %2 GiB"
+}

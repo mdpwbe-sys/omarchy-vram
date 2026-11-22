@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "io.github.mdpwbe-sys.vram",
+  "name": "VRAM",
+  "version": "1.0.0",
+  "author": "Matsetop",
+  "license": "MIT",
+  "homepage": "https://github.com/mdpwbe-sys/omarchy-vram",
+  "description": "VRAM and RAM meters for the Omarchy bar, with a click that asks ComfyUI and Ollama to unload.",
+  "kinds": ["bar-widget"],
+  "entryPoints": {
+    "barWidget": "Widget.qml"
+  },
+  "barWidget": {
+    "displayName": "VRAM",
+    "description": "VRAM and RAM meters. Click to unload ComfyUI and Ollama models.",
+    "category": "System",
+    "allowMultiple": false,
+    "defaultSection": "centerEnd",
+    "defaults": {
+      "comfyUrl": "http://127.0.0.1:8188",
+      "ollamaHost": "127.0.0.1:11434",
+      "refreshSec": 3,
+      "warnPercent": 85
+    },
+    "schema": [
+      {
+        "key": "comfyUrl",
+        "type": "string",
+        "label": "ComfyUI URL",
+        "defaultValue": "http://127.0.0.1:8188",
+        "description": "Origin only. Leave empty to skip ComfyUI. Used on click, not polled."
+      },
+      {
+        "key": "ollamaHost",
+        "type": "string",
+        "label": "Ollama host",
+        "defaultValue": "127.0.0.1:11434",
+        "description": "host:port. Leave empty to skip Ollama. Used on click, not polled."
+      },
+      {
+        "key": "refreshSec",
+        "type": "integer",
+        "label": "Refresh interval (seconds)",
+        "min": 2,
+        "max": 60,
+        "step": 1,
+        "defaultValue": 3
+      },
+      {
+        "key": "warnPercent",
+        "type": "integer",
+        "label": "Warning threshold",
+        "min": 50,
+        "max": 100,
+        "step": 1,
+        "defaultValue": 85
+      }
+    ]
+  }
+}
